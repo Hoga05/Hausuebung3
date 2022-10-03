@@ -1,11 +1,12 @@
 package net.htlgkr.hagers190220.HUE3;
 
-import java.util.Comparator;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Weapon {
+public class Weapon{
 
     String name;
-    CombatType combatType;
+    CombatType combtType;
     DamageType damageType;
     double damage;
     double speed;
@@ -20,12 +21,12 @@ public class Weapon {
         this.name = name;
     }
 
-    public CombatType getCombatType() {
-        return combatType;
+    public CombatType getCombtType() {
+        return combtType;
     }
 
-    public void setCombatType(CombatType combatType) {
-        this.combatType = combatType;
+    public void setCombtType(CombatType combtType) {
+        this.combtType = combtType;
     }
 
     public DamageType getDamageType() {
@@ -62,7 +63,7 @@ public class Weapon {
 
     public Weapon(String name, CombatType combatType, DamageType damageType, double damage, double speed, double strength, double value) {
         this.name = name;
-        this.combatType = combatType;
+        this.combtType = combatType;
         this.damageType = damageType;
         this.damage = damage;
         this.speed = speed;
@@ -72,7 +73,7 @@ public class Weapon {
 
     @Override
     public String toString() {
-        return name + " " +damage;
+        return name + " " + combtType + " " + damageType + " " + damage + " " + speed + " " + strength + " " + value;
     }
 
     public double getDamage() {
@@ -81,5 +82,20 @@ public class Weapon {
 
     public void setDamage(double damage) {
         this.damage = damage;
+    }
+
+
+
+    public List<String> getTeile(){
+
+        List<String> l = new ArrayList<>();
+        l.add(name);
+        l.add(combtType+"");
+        l.add(damageType+"");
+        l.add(damage+"");
+        l.add(speed+"");
+        l.add(strength+"");
+        l.add(value+"");
+        return l;
     }
 }

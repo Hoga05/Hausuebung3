@@ -7,8 +7,9 @@ public class Main {
         FileReader f = new FileReader("weapons.csv");
         f.readDatei();
 
-        f.sortCombatTypeDamageTypeDamage();
-        f.getWeaponsList().forEach(System.out::println);
+        f.sortDamageCombatTypeDamageTypeDamage();
+
+        f.print();
 
     }
 }
