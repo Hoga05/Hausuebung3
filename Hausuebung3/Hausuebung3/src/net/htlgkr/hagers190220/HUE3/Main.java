@@ -8,7 +8,7 @@ public class Main {
         f.readDatei();
 
         f.sort();
-        f.weaponsList.forEach(System.out::println);
+        f.getWeaponsList().forEach(System.out::println);
 
     }
 }

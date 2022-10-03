@@ -11,7 +11,7 @@ class FileReaderTest {
 
         FileReader f = new FileReader("weapons.csv");
         f.readDatei();
-        assertTrue(f.weaponsList.get(0).name.equals("Varscona"));
+        assertTrue(f.getWeaponsList().get(0).name.equals("Varscona"));
     }
 
     @org.junit.jupiter.api.Test
@@ -20,7 +20,7 @@ class FileReaderTest {
         FileReader f = new FileReader("weapons.csv");
         f.readDatei();
         f.sort();
-        assertTrue(f.weaponsList.get(0).name.equals("Carsomyr"));
+        assertTrue(f.getWeaponsList().get(0).name.equals("Carsomyr"));
 
     }
 }

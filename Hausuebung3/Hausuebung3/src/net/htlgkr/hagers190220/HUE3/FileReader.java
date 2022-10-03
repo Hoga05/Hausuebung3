@@ -12,7 +12,11 @@ import java.util.List;
 public class FileReader {
 
     private String datei;
-    public List<Weapon> weaponsList;
+    private List<Weapon> weaponsList;
+
+    public List<Weapon> getWeaponsList() {
+        return weaponsList;
+    }
 
     public FileReader(String datei) {
         this.datei = datei;
