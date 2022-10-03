@@ -51,7 +51,7 @@ public class FileReader {
         weaponsList = weaponsList.stream()
                         .sorted(Comparator.comparing(Weapon::getCombatType)
                         .thenComparing(Weapon::getDamageType)
-                        .thenComparingDouble(Weapon::getDamage))
+                        .thenComparing(Weapon::getName))
                         .toList();
 
     }
