@@ -1,5 +1,7 @@
 package net.htlgkr.hagers190220.HUE3;
 
+import java.util.Comparator;
+
 public class Weapon {
 
     String name;
@@ -18,5 +20,18 @@ public class Weapon {
         this.speed = speed;
         this.strength = strength;
         this.value = value;
+    }
+
+    @Override
+    public String toString() {
+        return name + " " +damage;
+    }
+
+    public double getDamage() {
+        return damage;
+    }
+
+    public void setDamage(double damage) {
+        this.damage = damage;
     }
 }
