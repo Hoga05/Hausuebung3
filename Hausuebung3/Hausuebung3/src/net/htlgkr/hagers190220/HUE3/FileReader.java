@@ -19,19 +19,14 @@ public class FileReader {
         this.weaponsList = new ArrayList<>();
     }
 
-    public void readDatei(){
+    public void readDatei() {
 
         try {
-           weaponsList =  Files.lines(new File(datei).toPath())
-                   .skip(1)
-                   .map(s -> s.split(";"))
-                   .map((w) -> new Weapon(w[0],CombatType.valueOf(w[1]),DamageType.valueOf(w[2]),Double.parseDouble(w[3]),Double.parseDouble(w[4]),Double.parseDouble(w[5]),Double.parseDouble(w[6])))
-                   .toList();
-
-           weaponsList = weaponsList.stream().sorted(Comparator.comparingDouble(d -> d.damage))
+            weaponsList = Files.lines(new File(datei).toPath())
+                    .skip(1)
+                    .map(s -> s.split(";"))
+                    .map((w) -> new Weapon(w[0], CombatType.valueOf(w[1]), DamageType.valueOf(w[2]), Double.parseDouble(w[3]), Double.parseDouble(w[4]), Double.parseDouble(w[5]), Double.parseDouble(w[6])))
                     .toList();
-
-
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -39,4 +34,14 @@ public class FileReader {
 
     }
 
+    public void sort() {
+
+
+        weaponsList = weaponsList.stream().sorted(Comparator.comparingDouble(Weapon::getDamage).reversed()).toList();
+
+
+    }
+
 }
+
+
