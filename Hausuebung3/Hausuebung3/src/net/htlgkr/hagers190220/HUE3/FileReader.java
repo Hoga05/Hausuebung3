@@ -38,11 +38,21 @@ public class FileReader {
 
     }
 
-    public void sort() {
+    public void sortDamage() {
 
 
         weaponsList = weaponsList.stream().sorted(Comparator.comparingDouble(Weapon::getDamage).reversed()).toList();
 
+
+    }
+
+    public void sortCombatTypeDamageTypeDamage(){
+
+        weaponsList = weaponsList.stream()
+                        .sorted(Comparator.comparing(Weapon::getCombatType)
+                        .thenComparing(Weapon::getDamageType)
+                        .thenComparingDouble(Weapon::getDamage))
+                        .toList();
 
     }
 
