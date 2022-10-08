@@ -8,10 +8,10 @@ public class Weapon{
     String name;
     CombatType combtType;
     DamageType damageType;
-    double damage;
-    double speed;
-    double strength;
-    double value;
+    int damage;
+    int speed;
+    int strength;
+    int value;
 
     public String getName() {
         return name;
@@ -25,7 +25,7 @@ public class Weapon{
         return combtType;
     }
 
-    public void setCombtType(CombatType combtType) {
+    public void setCombatType(CombatType combtType) {
         this.combtType = combtType;
     }
 
@@ -37,31 +37,31 @@ public class Weapon{
         this.damageType = damageType;
     }
 
-    public double getSpeed() {
+    public int getSpeed() {
         return speed;
     }
 
-    public void setSpeed(double speed) {
+    public void setSpeed(int speed) {
         this.speed = speed;
     }
 
-    public double getStrength() {
+    public int getStrength() {
         return strength;
     }
 
-    public void setStrength(double strength) {
+    public void setStrength(int strength) {
         this.strength = strength;
     }
 
-    public double getValue() {
+    public int getValue() {
         return value;
     }
 
-    public void setValue(double value) {
+    public void setValue(int value) {
         this.value = value;
     }
 
-    public Weapon(String name, CombatType combatType, DamageType damageType, double damage, double speed, double strength, double value) {
+    public Weapon(String name, CombatType combatType, DamageType damageType, int damage, int speed, int strength, int value) {
         this.name = name;
         this.combtType = combatType;
         this.damageType = damageType;
@@ -76,11 +76,11 @@ public class Weapon{
         return name + " " + combtType + " " + damageType + " " + damage + " " + speed + " " + strength + " " + value;
     }
 
-    public double getDamage() {
+    public int getDamage() {
         return damage;
     }
 
-    public void setDamage(double damage) {
+    public void setDamage(int damage) {
         this.damage = damage;
     }
 

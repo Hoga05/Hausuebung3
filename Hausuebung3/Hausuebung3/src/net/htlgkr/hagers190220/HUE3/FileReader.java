@@ -27,7 +27,7 @@ public class FileReader{
             weaponsList = Files.lines(new File(datei).toPath())
                     .skip(1)
                     .map(s -> s.split(";"))
-                    .map((w) -> new Weapon(w[0], CombatType.valueOf(w[1]), DamageType.valueOf(w[2]), Double.parseDouble(w[3]), Double.parseDouble(w[4]), Double.parseDouble(w[5]), Double.parseDouble(w[6])))
+                    .map((w) -> new Weapon(w[0], CombatType.valueOf(w[1]), DamageType.valueOf(w[2]), Integer.parseInt(w[3]), Integer.parseInt(w[4]), Integer.parseInt(w[5]), Integer.parseInt(w[6])))
                     .toList();
 
         } catch (IOException e) {
